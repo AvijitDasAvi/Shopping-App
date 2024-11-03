@@ -86,7 +86,7 @@ class _HomePageState extends State<HomePage> {
                   "See All",
                   style: TextStyle(
                     fontSize: 16.0,
-                    color: Colors.red,
+                    color: Colors.redAccent,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -99,9 +99,26 @@ class _HomePageState extends State<HomePage> {
             //For list of categories item
             Row(
               children: [
+                Container(
+                  padding: EdgeInsets.all(10.0),
+                  margin: EdgeInsets.only(right: 20.0),
+                  height: 100.0,
+                  decoration: BoxDecoration(
+                    color: Colors.redAccent,
+                    borderRadius: BorderRadius.circular(15.0),
+                  ),
+                  child: Center(
+                    child: Text(
+                      "All",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ),
                 Expanded(
-                  child: Container(
-                    margin: EdgeInsets.only(left: 10.0),
+                  child: SizedBox(
                     height: 100.0,
                     child: ListView.builder(
                       itemCount: categoriesItem.length,
@@ -114,6 +131,82 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ],
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "All Products",
+                  style: SupportWidget.semiBoldTextStyle(),
+                ),
+                Text(
+                  "See All",
+                  style: TextStyle(
+                    fontSize: 16.0,
+                    color: Colors.redAccent,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            SizedBox(
+              height: 190.0,
+              child: ListView(
+                shrinkWrap: true,
+                scrollDirection: Axis.horizontal,
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20.0)),
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          "assets/images/headphone2.png",
+                          height: 120.0,
+                          width: 120.0,
+                          fit: BoxFit.cover,
+                        ),
+                        Text(
+                          "Headphone",
+                          style: SupportWidget.semiBoldTextStyle(),
+                        ),
+                        Row(
+                          children: [
+                            Text(
+                              "\$100",
+                              style: TextStyle(
+                                color: Colors.redAccent,
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(
+                              width: 25.0,
+                            ),
+                            Container(
+                              decoration: BoxDecoration(
+                                color: Colors.redAccent,
+                                shape: BoxShape.circle,
+                              ),
+                              child: Icon(
+                                Icons.add,
+                                color: Colors.white,
+                              ),
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
             ),
           ],
         ),
