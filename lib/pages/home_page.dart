@@ -77,7 +77,7 @@ class _HomePageState extends State<HomePage> {
                 Text(
                   "See All",
                   style: TextStyle(
-                    fontSize: 18.0,
+                    fontSize: 16.0,
                     color: Colors.red,
                     fontWeight: FontWeight.bold,
                   ),
