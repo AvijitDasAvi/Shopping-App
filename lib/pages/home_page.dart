@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopping_app/widgets/categories_item.dart';
 import 'package:shopping_app/widgets/support_widgets.dart';
 
 class HomePage extends StatefulWidget {
@@ -9,6 +10,13 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  List categoriesItem = [
+    "assets/images/television.png",
+    "assets/images/laptop-screen.png",
+    "assets/images/smartphone.png",
+    "assets/images/headphones.png",
+    "assets/images/smartwatch.png",
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -83,7 +91,30 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ],
-            )
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+
+            //For list of categories item
+            Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    margin: EdgeInsets.only(left: 10.0),
+                    height: 100.0,
+                    child: ListView.builder(
+                      itemCount: categoriesItem.length,
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (context, index) {
+                        return CategoriesItem(image: categoriesItem[index]);
+                      },
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
