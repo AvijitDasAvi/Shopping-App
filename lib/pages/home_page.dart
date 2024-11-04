@@ -191,6 +191,7 @@ class _HomePageState extends State<HomePage> {
                               width: 25.0,
                             ),
                             Container(
+                              padding: EdgeInsets.all(2.0),
                               decoration: BoxDecoration(
                                 color: Colors.redAccent,
                                 shape: BoxShape.circle,
@@ -199,12 +200,58 @@ class _HomePageState extends State<HomePage> {
                                 Icons.add,
                                 color: Colors.white,
                               ),
-                            )
+                            ),
                           ],
                         ),
                       ],
                     ),
-                  )
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: 20),
+                    decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20.0)),
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          "assets/images/watch.png",
+                          height: 120.0,
+                          width: 120.0,
+                          fit: BoxFit.cover,
+                        ),
+                        Text(
+                          "Smart Watch",
+                          style: SupportWidget.semiBoldTextStyle(),
+                        ),
+                        Row(
+                          children: [
+                            Text(
+                              "\$150",
+                              style: TextStyle(
+                                color: Colors.redAccent,
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(
+                              width: 25.0,
+                            ),
+                            Container(
+                              padding: EdgeInsets.all(2.0),
+                              decoration: BoxDecoration(
+                                color: Colors.redAccent,
+                                shape: BoxShape.circle,
+                              ),
+                              child: Icon(
+                                Icons.add,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
