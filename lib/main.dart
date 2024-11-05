@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shopping_app/pages/home_page.dart';
+import 'package:shopping_app/widgets/bottom_nav.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Shopping App",
-      home: HomePage(),
+      home: BottomNav(),
     );
   }
 }
